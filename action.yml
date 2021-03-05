@@ -1,12 +1,27 @@
-name: 'Confirm Trello link included on Pull Request'
-description: 'Confirm Trello link included on Pull Request'
+name: "Confirm change request link included on Pull Request"
+description: "Confirm change request link included on Pull Request"
 inputs:
-  link-regex: 
-    description: 'URL to use reg ex search for'
-    default: '(https:\/\/trello.com[^\)]*)'
+  repo-token:
+    required: true
+    description: "GITHUB_TOKEN secret"
+  link-regex:
+    description: "Change request url regex"
+    default: '(https:\/\/(?:www.)?(?:pivotaltracker\.com|sentry\.io))'
+  success-message:
+    description: "Message set on success"
+    default: "Found a change request link"
+  failure-message:
+    description: "Message set on failure"
+    default: "Unable to find a change request link matching {link-regex}"
+  include-comments:
+    description: "If true, include PR comments when looking for change request"
+    default: false
+  debug:
+    description: "If true, prints debug info workflow"
+    default: false
 outputs:
   msg:
-    description: 'output of action'
+    description: "output of action"
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: "node12"
+  main: "index.js"
