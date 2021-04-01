@@ -1,9 +1,6 @@
 name: "Confirm change request link included on Pull Request"
 description: "Confirm change request link included on Pull Request"
 inputs:
-  repo-token:
-    required: true
-    description: "GITHUB_TOKEN secret"
   link-regex:
     description: "Change request url regex"
     default: '(https:\/\/(?:www.)?(?:pivotaltracker\.com|sentry\.io))'
@@ -13,9 +10,6 @@ inputs:
   failure-message:
     description: "Message set on failure"
     default: "Unable to find a change request link matching {link-regex}"
-  include-comments:
-    description: "If true, include PR comments when looking for change request"
-    default: false
   debug:
     description: "If true, prints debug info workflow"
     default: false
