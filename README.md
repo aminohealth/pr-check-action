@@ -38,7 +38,7 @@ jobs:
 ### Inputs
 
 - `link-regex`: A regex that matches your expected change request urls
-  - default: '(https:\/\/(?:www.)?(?:pivotaltracker\.com|sentry\.io))'
+  - default: '(https:\/\/(?:www.)?(?:pivotaltracker\.com|sentry\.io|linear\.app))'
 - `success-message`: The message set on success
   - default: "Found a change request link"
 - `failure-message`: The message set on failure
