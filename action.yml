@@ -3,7 +3,7 @@ description: "Confirm change request link included on Pull Request"
 inputs:
   link-regex:
     description: "Change request url regex"
-    default: '(https:\/\/(?:www.)?(?:pivotaltracker\.com|sentry\.io))'
+    default: '(https:\/\/(?:www.)?(?:pivotaltracker\.com|sentry\.io|linear\.app))'
   success-message:
     description: "Message set on success"
     default: "Found a change request link"
